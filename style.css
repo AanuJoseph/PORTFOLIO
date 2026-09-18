@@ -752,10 +752,26 @@ span {
     background: rgba(255, 255, 255, 0.01);
     border: 1px solid var(--border);
     border-radius: 1.5rem;
+    -webkit-text-fill-color: var(--text-color);
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s, border-color 0.3s ease;
 }
 
 .contact form .input-box input {
     flex: 1 1 25rem;
+}
+
+.contact form .input-box input:-webkit-autofill,
+.contact form .input-box input:-webkit-autofill:hover,
+.contact form .input-box input:-webkit-autofill:focus,
+.contact form .input-box input:-webkit-autofill:active,
+.contact form textarea:-webkit-autofill,
+.contact form textarea:-webkit-autofill:hover,
+.contact form textarea:-webkit-autofill:focus,
+.contact form textarea:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.02) inset !important;
+    -webkit-text-fill-color: var(--text-color) !important;
+    border-color: rgba(247, 178, 103, 0.5) !important;
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
 }
 
 .contact form textarea {

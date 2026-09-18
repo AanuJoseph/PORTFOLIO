@@ -14,6 +14,16 @@ if (performance.getEntriesByType('navigation')[0]?.type === 'navigate') {
     }, 1500)
 }
 
+const contactForm = document.getElementById('contactForm')
+
+if (contactForm) {
+    contactForm.addEventListener('submit', () => {
+        setTimeout(() => {
+            contactForm.reset()
+        }, 100)
+    })
+}
+
 let menuIcon = document.querySelector('#menu-icon')
 let navbar = document.querySelector('.navbar')
 
